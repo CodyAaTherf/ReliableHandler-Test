@@ -13,7 +13,7 @@ const client = new Discord.Client({
 client.on('ready' , () => {
     console.log(`Logged in as ${client.user.tag}!`)
 
-    new ReliableHandler(client)
+    new ReliableHandler(client , 'cmds')
 })
 
 client.login(config.TOKEN)
