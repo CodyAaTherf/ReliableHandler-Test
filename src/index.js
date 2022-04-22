@@ -14,6 +14,8 @@ client.on('ready' , () => {
     console.log(`Logged in as ${client.user.tag}!`)
 
     new ReliableHandler(client , 'cmds')
+        .setDefaultPrefix('>')
+        .setSynatxError('Syntax Error!')
 })
 
 client.login(config.TOKEN)
